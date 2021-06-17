@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+{% block body %}
+<h1>Welcome to U Can't See Me Search Engine</h1>
+<div class="wrap">
+	<form  method='POST' class="search" action="/search" method="POST">
+		<input type="search" class="searchTerm" name="search" placeholder="   Search Research Papers" id="search">
+		<button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
+		<input type="submit" name="" value='Search'/>
+	</form>
+</div>
+<h2>Search Results for {{ query }} </h2>
+<p style="font-size: 15px">In {{ time }} seconds</p>
+
+<div class="content">
+    {% for result in results %}
+    	<h3>{{ result[0] }}</h3>
+    	<p>{{ result[1] }}</p>
+    {% endfor %}
+</div>
+{% endblock %}
