@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block body %}
+
+<ul>
+	<li ><a class="active" href="#">Welcome to U Can't See Me Search Engine</a></li>
+	<li style="float:right; " ><a class="active" href="#">Login</a></li>
+</ul>
+<!--<form  method='POST' class="forms" action="/search" method="POST">
+	<input type="search" name="search" placeholder=" Search Research Papers" id="search">
+	<input type="submit" name="" value='Search'/>
+</form>-->
+<p><br><br><br><br><br><br><br><br><br><br><br></p>
+	<div class="search" style="text-align:center">
+		<form  method='POST' id="form_search" action="/search" method="POST">
+			<input type="search" class="searchTerm" name="search" placeholder="   Search Research Papers" id="search">
+			<!--<button type="submit" class="searchButton"><i class="fa fa-search"></i></button>-->
+			<input type="submit" name="" value='Search'/>
+		</form>
+	</div>
+
+
+<footer id="footer">
+  <p>Created by: Aritra Shome<br>
+  <a href="https://github.com/aritrashome">Github</a></p>
+</footer>
+{% endblock %}
